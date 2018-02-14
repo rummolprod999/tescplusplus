@@ -1,17 +1,31 @@
 #include <iostream>
+#include <string>
+#include <utility>
 
-using namespace std;
+using std::string;
+using std::cout;
+using std::endl;
 
-int main() {
-    for (int i=1; i < 10; i++)
+class Person
+{
+public:
+    string name;
+    int age;
+    Person(string n, int a)
     {
-        for(int j = 1; j < 10; j++)
-        {
-            std::cout << i * j << "\t";
-        }
-        std::cout << std::endl;
+        name = std::move(n); age = a;
     }
+    void move()
+    {
+        cout << name << " is moving" << endl;
+    }
+};
+int main()
+{
+    Person person = Person("Tom", 22);
+    cout << "Name: " << person.name << "\tAge: " << person.age << endl;
+    person.name = "Bob";
+    person.move();
+
     return 0;
-
-
 }
