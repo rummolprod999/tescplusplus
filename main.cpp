@@ -1,25 +1,15 @@
 #include <iostream>
-double divide(int, int);
+typedef char CHAR, *PSTR;
+struct A
+{
+    constexpr const static double x = 10.0;
+};
+
+
 int main()
 {
-    int x = 500;
-    int y = 0;
-    try
-    {
-        double z = divide(x, y);
-        std::cout << z << std::endl;
-    }
-    catch (const char* msg)
-    {
-        std::cout << msg << std::endl;
-    }
-    std::cout << "The End..." << std::endl;
+    A a;
+    PSTR x;
+    const char* pX, Y, Z; //1
     return 0;
-}
-
-double divide(int a, int b)
-{
-    if (b == 0)
-        throw "Division by zero!";
-    return a / b;
 }

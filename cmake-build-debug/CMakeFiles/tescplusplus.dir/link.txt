@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/tescplusplus.dir/main.cpp.o CMakeFiles/tescplusplus.dir/factorial.cpp.o  -o main.cpp/tescplusplus 
