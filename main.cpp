@@ -14,6 +14,14 @@ int main()
     auto e = &ci;
     e = &t;
     int *const pp = &t;
+    auto &m = ci, *p = &ci;
+    auto tt = &ci;
+    const int d = 42;
+    auto j = d;
+    const auto &k = d;
+    auto *v = &d;
+    auto v1 = &d;
+    const auto j2 = d, &k2 = d;
     cout << typeid(e).name() << endl;
     return 0;
 }
